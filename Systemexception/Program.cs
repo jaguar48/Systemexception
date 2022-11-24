@@ -21,7 +21,7 @@ namespace ATM_PROJECT
     {
         public static void ValidastEven()
         {
-            Console.WriteLine("Enter age");
+            Console.WriteLine("Your age must be even number");
             int my_age = Convert.ToInt32(Console.ReadLine());
             if (my_age % 2 != 0)
             {
