@@ -26,9 +26,10 @@ namespace ATM_PROJECT
             if (my_age % 2 != 0)
             {
 
-                throw new InvalidAgeException("Unable to find age");
-
-
+                throw new InvalidAgeException("Unable to find age")
+            }
+            else {
+                return my_age;
             }
         }
     }
@@ -46,7 +47,9 @@ namespace ATM_PROJECT
             catch (InvalidAgeException ex)
             {
                 Console.WriteLine(ex.Message);
-              
+                Console.WriteLine($"StackTrace: {ex.StackTrace}");
+                Console.WriteLine($"Source: {ex.Source}");
+                
             }
             catch (DivideByZeroException dividebyzero)
             {
